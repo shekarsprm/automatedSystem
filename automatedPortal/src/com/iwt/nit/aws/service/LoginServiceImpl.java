@@ -18,6 +18,85 @@ public class LoginServiceImpl implements LoginServiceIF {
 	private static Logger LOGGER = Logger.getLogger(LoginServiceImpl.class);
    private LoginDaoIF loginDaoIF=null;
 	public UserASPVO userDetails(String username) throws ServiceException {
+		
+		UserASPVO userInfo=null;
+		
+		
+		try {
+			UserASPDTO userDTO= loginDaoIF.userDetails(username);
+			
+			// USer Exists or NOT
+			
+			// ACTIVE
+			
+			// EXPIRE
+			
+			// FOR THIS active or NOT
+			
+		} catch (DaoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// One either we can connecto LDAP Server
+		
+		
+		// We can to our DB for ALL Validation
+		return userInfo; 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
 		UserASPVO userVO = new UserASPVO();
 		loginDaoIF=DaoFactory.loginDaoFactory();
 		try {
@@ -32,5 +111,5 @@ public class LoginServiceImpl implements LoginServiceIF {
 			LOGGER.error("Error into the userDetails BeanUtils issue "+e.getMessage());
 		}
 		return userVO;
-	}
+	*/}
 }
