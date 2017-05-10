@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration debug="false">
+	<appender name="infoAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="INFO" />
+		<param name="File" value="E:\\logs\\asp\\info.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<!-- <param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="10" />
+		 -->
+		 <layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d
+                %-5p  [%c{1}] %m %n" />
+		</layout>
+	</appender>
+	<appender name="debugAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="DEBUG" />
+		<param name="File" value="E:\\logs\\asp\\debug.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<!-- <param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="10" />
+		 -->
+		 <layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d
+                %-5p  [%c{1}] %m %n" />
+		</layout>
+	</appender>
+	<appender name="errorAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="ERROR" />
+		<param name="File" value="E:\\logs\\asp\\error.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<!-- <param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="10" />
+		 --><layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d
+                %-5p  [%c{1}] %m %n" />
+		</layout>
+	</appender>
+
+	<appender name="warnAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="WARN" />
+		<param name="File" value="E:\\logs\\asp\\warn.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<!-- <param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="10" />
+		 --><layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d
+                %-5p  [%c{1}] %m %n" />
+		</layout>
+	</appender>
+	<appender name="traceAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="TRACE" />
+		<param name="File" value="E:\\logs\\asp\\trace.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<!-- <param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="10" />
+		 --><layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d
+                %-5p  [%c{1}] %m %n" />
+		</layout>
+	</appender>
+	<appender name="fatalAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="FATAL" />
+		<param name="File" value="E:\\logs\\asp\\fatal.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+      <!-- <param name="MaxFileSize" value="20MB" />
+		<param name="MaxBackupIndex" value="10" />
+      -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d
+                %-5p  [%c{1}] %m %n" />
+		</layout>
+	</appender>
+	<logger name="com.iwt.nit.aws" additivity="false">
+		<level value="ALL" />
+		<!-- ALL > TRACE > DEBUG > INFO > WARN > ERROR > FATAL > OFF -->
+		<!-- <appender-ref ref="consoleAppender"/> -->
+		<appender-ref ref="infoAppender" />
+		<appender-ref ref="debugAppender" />
+		<appender-ref ref="errorAppender" />
+		<appender-ref ref="warnAppender" />
+		<appender-ref ref="traceAppender" />
+		<appender-ref ref="fatalAppender" />
+	</logger>
+</log4j:configuration>
