@@ -1,0 +1,36 @@
+
+i) Startup Process
+
+ii) LOgin Validation/Serevice: ==>>
+
+Controller ===>> Service  ===DAO   ==>> LDAP_USERS
+
+                     LDAP_UserS_DAOIMP           (Connect to LDAP_TBL)
+                     LoginAutomatedUserDAOIMPL   (Connect to AUTOMATED_USERS)
+
+
+iii) Password Checking             
+
+iv)Create Profile Button
+
+v) Update the passwod changes require Jsp end ,Controller and DAO end..
+
+===============================================================================================
+
+
+CSV
+Excel
+PDF
+TSV
+
+
+Local Dev                            ============================> Client Dev /Client Stg /Client Prod
+
+
+
+sh start.sh
+
+./start.sh
+
+
+
