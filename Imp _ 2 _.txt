@@ -1,0 +1,54 @@
+I) Login Page Controller ===>> LDPA DB ===> Our application DB 
+
+ii) Password Checking
+
+  Login :
+  Password :
+  Submit   Cancel
+     Forgot Password
+
+
+iii) If we enter correct username and password : Home Page /Dash Board Page 
+
+  My Profile
+  Update Profile
+  Password Change
+
+
+
+i) StartUpController : startUpProcess()
+ii)LoginController : loginPage Validatio()
+iii)PasswordController: sendPassword(),(Back log)
+iv)SettingController : myProfile(),update(),updatePassword()
+
+
+
+Controller  ===>> Service            === >> DAO 
+
+Controller ===>> Service =====================>>  One Application 
+
+  |
+  |
+  |
+
+RESTTemplate to call the Another Service  mean Here Another Project
+
+  |
+  |
+
+Another Project
+Controller ===>> Service =====================>> Another Project Spring REST API
+
+
+
+automatedPortal : War  ( 1+2+3) is added in out Lib Folder
+
+
+
+
+
+
+
+1) automatedUtils : jar
+2) automatedBeans : jar
+3) automatedServiceCalls: jar
